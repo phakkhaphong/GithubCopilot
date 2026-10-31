@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
-// TODO: Register ProductService and IProductService after completing Lab02.
+// Register ProductService in DI
+builder.Services.AddSingleton<WebApi.Services.IProductService, WebApi.Services.ProductService>();
 var app = builder.Build();
 app.MapControllers();
 app.Run();

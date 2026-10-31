@@ -3,7 +3,7 @@ using WebApi.Models;
 
 namespace WebApi.Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
         private readonly List<Product> _products = new()
         {
